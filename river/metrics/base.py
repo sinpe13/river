@@ -3,7 +3,6 @@ from __future__ import annotations
 import abc
 import collections
 import operator
-import typing
 
 from river import base, reco, stats, utils
 
@@ -220,7 +219,7 @@ class RankingMetric(Metric):
 
     def __init__(self, k=None):
         if k is not None and k <= 0:
-            raise ValueError('k must be positive or None')
+            raise ValueError("k must be positive or None")
         self.k = k
 
     @abc.abstractmethod
@@ -245,7 +244,7 @@ class RankingMetric(Metric):
                 "are not compatible"
             )
         return Metrics([self, other])
-            
+
     def _resolve_k(self, y_pred):
         return len(y_pred) if self.k is None else self.k
 

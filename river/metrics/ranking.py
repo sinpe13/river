@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import abc
 import collections
 import typing
 
@@ -116,7 +115,7 @@ class RecallAtK(BinaryRankAtKMetric):
     ...    print(metric)
     RecallAtK: 50.00%
     RecallAtK: 75.00%
-    
+
     Notes
     -----
     - y_true may be a list/set of relevant items, or a dict of scores used with relevance_threshold
@@ -163,7 +162,7 @@ class F1AtK(BinaryRankAtKMetric):
     ...    print(metric)
     F1AtK: 50.00%
     F1AtK: 75.00%
-    
+
     Notes
     -----
     - y_true may be a list/set of relevant items, or a dict of scores used with relevance_threshold
